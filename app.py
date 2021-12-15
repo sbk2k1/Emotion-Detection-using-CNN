@@ -27,5 +27,19 @@ def index():
     return render_template("index.html")
 
 
+@app.route("/predict-image/", methods=["GET", "POST"])
+def predict_img():
+    message = request.get_json(force=True)
+    encoded = message["image"]
+    decoded = base64.b64decode(encoded)
+    image = Image.open(io.BytesIO(decoded))
+    pred = model.predict(image)
+    idx = np.argmax(np.array(pred[0]))
+    response = {
+        'predictionImg': str(classes[idx])
+    }
+    return jsonify(response)
+
+
 if __name__ == "__main__":
     app.run(debug=True)
