@@ -13,13 +13,16 @@
 	</div>
 
     <div class="row">
-		<div class="col" style="background-color: #232F34;">
+		<div class="col" style="background: #5f2c82;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		">
 			<div><span>Upload an Image!</span></div>
 			<label for="image" class="btn1 b2">UPLOAD</label>
   			<input id="image" style="visibility:hidden; width: 0" type="file" accept="image/png, image/jpeg">
   			<button class="btn1 b2" id="pred-btn">PREDICT</button>
 			<div class="pic"><img style="border:5px solid;" id="display-img" src="{{url_for("static", filename="upload.jpg")}}"/></div>
-			<p>I think it's a <span id="prediction-img" class="pred">...</span></p>
+			<p>I think the person is <span id="prediction-img" class="pred">...</span></p>
 			<div class="ins" style="background-color: #11e8f7;">Upload an image...and see what the model thinks about it!</div>
 		</div>
 	</div>
