@@ -18,6 +18,13 @@ def get_model():
     print("Model Loaded")
 
 
+def preprocess_img(image, target_size):
+    image = image.resize(target_size)
+    image = img_to_array(image)
+    image = np.expand_dims(image, axis=0)
+    return image
+
+
 print("loading model...")
 get_model()
 
@@ -33,7 +40,8 @@ def predict_img():
     encoded = message["image"]
     decoded = base64.b64decode(encoded)
     image = Image.open(io.BytesIO(decoded))
-    pred = model.predict(image)
+    processed_img = preprocess_img(image, target_size=(48, 48))
+    pred = model.predict(processed_img)
     idx = np.argmax(np.array(pred[0]))
     response = {
         'predictionImg': str(classes[idx])
