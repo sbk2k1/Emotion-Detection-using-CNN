@@ -27,12 +27,12 @@ You can download any of the models from here:
 
 ## Video
 
-[Repository Name] is accompanied by a video tutorial available on YouTube. Watch the video below to get a visual walkthrough of [Repository Name]:
+This Project is accompanied by a video tutorial available on YouTube. Watch the video below to get a visual walkthrough:
 
-[![Video](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID)
 
-Click on the image above or [here](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID) to watch the video.
+[<img src="https://img.youtube.com/vi/nEYiJ67rBKc/hqdefault.jpg" 
+/>](https://www.youtube.com/watch?v=nEYiJ67rBKc)
 
 ## Author
 
-[Repository Name] is developed and maintained by [Author Name]. If you have any questions or suggestions, please feel free to contact [Author Name] at [author@example.com].
+This project is developed and maintained by @sbk2k1.
