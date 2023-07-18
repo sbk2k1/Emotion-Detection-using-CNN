@@ -9,15 +9,14 @@ This application is a Computer Vision Application to detect the emotions of peop
 To install [Repository Name], follow these steps:
 
 1. Clone Repositories
-2. Install Dependancies
-3. Step 3
+2. Install Dependencies
+3. Start app.py
 
 ## Downloads
 
 You can download any of the models from here:
 
-- Check Model Performances
-  ![here](https://drive.google.com/drive/u/3/folders/1ilxMnQrnN0PVeVvUYAdzi34BKOIpbJJW)
+- Check Model Performances from [here](https://github.com/sbk2k1/Emotion-Detection-using-CNN/tree/master/Models/Models%20-%203000%20images)
 - Download the TensorFlow Model from [here](https://drive.google.com/drive/u/3/folders/1ilxMnQrnN0PVeVvUYAdzi34BKOIpbJJW)
 
 ## Screenshots
