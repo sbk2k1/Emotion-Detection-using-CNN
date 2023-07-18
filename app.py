@@ -9,12 +9,12 @@ from flask import Flask, request, render_template, jsonify
 
 app = Flask(__name__)
 
-classes = ["sad", "fearful", "angry", "happy", "surprised", "neutral"]
+classes = ["Angry", "Afraid", "Happy", "Neutral", "Sad", "Surprise"]
 
 
 def get_model():
     global model
-    model = load_model("exp_det.h5")
+    model = load_model("./exp_det.h5", compile=False)
     print("Model Loaded")
 
 
@@ -42,6 +42,7 @@ def predict_img():
     image = Image.open(io.BytesIO(decoded))
     processed_img = preprocess_img(image, target_size=(48, 48))
     pred = model.predict(processed_img)
+    print(pred)
     idx = np.argmax(np.array(pred[0]))
     response = {
         'predictionImg': str(classes[idx])
