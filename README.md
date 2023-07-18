@@ -8,9 +8,10 @@ This application is a Computer Vision Application to detect the emotions of peop
 
 To install [Repository Name], follow these steps:
 
-1. Clone Repositories
-2. Install Dependencies
-3. Start app.py
+1. Clone Repositories.
+2. Install Dependencies. (keras, tensorflow, flask)
+3. Download any model following the steps below.
+4. Rename the model to exp_det.h5
 
 ## Downloads
 
