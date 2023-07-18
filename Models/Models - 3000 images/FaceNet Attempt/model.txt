@@ -1,0 +1,45 @@
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Input, Conv2D, BatchNormalization, MaxPooling2D, Flatten, Dense
+
+def facenet_model(num_expressions):
+    inputs = Input(shape=(48, 48, 1))
+
+    x = Conv2D(32, kernel_size=(3, 3), activation='relu', padding='same')(inputs)
+    x = BatchNormalization()(x)
+    x = Conv2D(64, kernel_size=(3, 3), activation='relu', padding='same')(x)
+    x = BatchNormalization()(x)
+    x = MaxPooling2D(pool_size=(2, 2))(x)
+
+    x = Conv2D(128, kernel_size=(3, 3), activation='relu', padding='same')(x)
+    x = BatchNormalization()(x)
+    x = Conv2D(256, kernel_size=(3, 3), activation='relu', padding='same')(x)
+    x = BatchNormalization()(x)
+    x = Conv2D(256, kernel_size=(3, 3), activation='relu', padding='same')(x)
+    x = BatchNormalization()(x)
+    x = MaxPooling2D(pool_size=(2, 2))(x)
+
+    x = Conv2D(512, kernel_size=(3, 3), activation='relu', padding='same')(x)
+    x = BatchNormalization()(x)
+    x = Conv2D(512, kernel_size=(3, 3), activation='relu', padding='same')(x)
+    x = BatchNormalization()(x)
+    x = Conv2D(512, kernel_size=(3, 3), activation='relu', padding='same')(x)
+    x = BatchNormalization()(x)
+    x = MaxPooling2D(pool_size=(2, 2))(x)
+
+    x = Conv2D(512, kernel_size=(3, 3), activation='relu', padding='same')(x)
+    x = BatchNormalization()(x)
+    x = Conv2D(512, kernel_size=(3, 3), activation='relu', padding='same')(x)
+    x = BatchNormalization()(x)
+    x = Conv2D(512, kernel_size=(3, 3), activation='relu', padding='same')(x)
+    x = BatchNormalization()(x)
+    x = MaxPooling2D(pool_size=(2, 2))(x)
+
+    x = Flatten()(x)
+    x = Dense(512, activation='relu')(x)
+    x = BatchNormalization()(x)
+
+    outputs = Dense(num_expressions, activation='softmax')(x)
+
+    model = Model(inputs=inputs, outputs=outputs)
+
+    return model
