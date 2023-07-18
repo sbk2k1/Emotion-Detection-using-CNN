@@ -20,13 +20,10 @@ You can download any of the models from here:
 - Check Model Performances from [here](https://github.com/sbk2k1/Emotion-Detection-using-CNN/tree/master/Models/Models%20-%203000%20images)
 - Download the TensorFlow Model from [here](https://drive.google.com/drive/u/3/folders/1ilxMnQrnN0PVeVvUYAdzi34BKOIpbJJW)
 
-## Screenshots
+## Screenshot
 
-![Screenshot 1](screenshots/screenshot1.png)
-*Description of Screenshot 1*
-
-![Screenshot 2](screenshots/screenshot2.png)
-*Description of Screenshot 2*
+![Screenshot 1](./static/Capture.PNG)
+*App on Startup*
 
 ## Video
 
